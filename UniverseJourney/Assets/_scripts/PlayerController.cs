@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController CharacterController;
     public float speed = 6f;
-    /*public float runSpeed = 12f;
-    public float currentSpeed; */
+    public float runSpeed = 12f;
+    public float currentSpeed; 
 
     public Animator animator;
 
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        //currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : speed;
+        currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : speed;
 
         float horizontalMove = Input.GetAxis("Horizontal");
         float verticalMove = Input.GetAxis("Vertical");
@@ -39,13 +39,11 @@ public class PlayerController : MonoBehaviour
 
 
         Vector3 move = transform.forward * verticalMove + transform.right * horizontalMove;
-        CharacterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
+        CharacterController.Move(currentSpeed * Time.deltaTime * move + gravityMove * Time.deltaTime);
 
-
-        //CharacterController.Move(currentSpeed * Time.deltaTime * move + gravityMove * Time.deltaTime);
 
         animator.SetBool("isWalking", verticalMove != 0 || horizontalMove != 0);
-        //animator.SetBool("Run", currentSpeed == runSpeed);
+        animator.SetBool("Run", currentSpeed == runSpeed);
     }
 
 }
