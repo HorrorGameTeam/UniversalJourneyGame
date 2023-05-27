@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,6 +7,8 @@ public class EnemySpawner : MonoBehaviour
 {
     public Enemy enemy;
     private List<Enemy> enemies;
+    public TextMeshProUGUI zombiesText;
+    public int currentEnemy;
 
     [Range(0, 100)]
     public int numberOfEnemies = 25;
@@ -19,6 +22,8 @@ public class EnemySpawner : MonoBehaviour
             Enemy spawned = Instantiate(enemy, RandomNavmeshLocation(range), Quaternion.identity) as Enemy;
             enemies.Add(spawned);
         }
+
+        currentEnemy = numberOfEnemies;
     }
 
     public Vector3 RandomNavmeshLocation(float radius)
@@ -32,5 +37,9 @@ public class EnemySpawner : MonoBehaviour
             finalPosition = hit.position;
         }
         return finalPosition;
+    }
+     void Update()
+    {
+        zombiesText.text = "Enemy Counter: " + currentEnemy.ToString();
     }
 }

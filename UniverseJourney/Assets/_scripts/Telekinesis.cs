@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Telekinesis : MonoBehaviour
 {
+    private enum Sounds{
+        +
+    }
+
+
     public float ManuplationDistance = 20f;
     private GameObject _heldObject;
     public Transform holdPosition;
@@ -14,6 +20,9 @@ public class Telekinesis : MonoBehaviour
     private float _minThrow = 2f;
     private float _maxThrow = 100f;
     private Vector3 _rotateVector;
+    public TextMeshProUGUI forceText;
+    public AudioClip[] tkSounds;
+    private AudioSource _audioSource;
 
 
 
@@ -51,7 +60,7 @@ public class Telekinesis : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             if (!_holdsObject)
             {
@@ -64,7 +73,7 @@ public class Telekinesis : MonoBehaviour
             }
 
         }
-        if (Input.GetMouseButton(1) && _holdsObject)
+        if (Input.GetMouseButton(0) && _holdsObject)
         {
             throwForce += 0.1f;
         }
@@ -82,6 +91,7 @@ public class Telekinesis : MonoBehaviour
                 MoveObjectPosition();
             }
         }
+        forceText.text = throwForce.ToString(format:"F1");
     }
 
 
@@ -91,6 +101,7 @@ public class Telekinesis : MonoBehaviour
         _heldObject.transform.parent = null;
         _holdsObject = false;
         _heldObject = null;
+        throwForce = 5f;
     }
 
     private void ShootObject()
@@ -111,6 +122,11 @@ public class Telekinesis : MonoBehaviour
     private void RotateBox()
     {
         _heldObject.transform.Rotate(_rotateVector);
+    }
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
     }
 
 }

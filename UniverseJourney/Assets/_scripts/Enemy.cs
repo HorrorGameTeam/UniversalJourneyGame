@@ -11,15 +11,30 @@ public class Enemy : MonoBehaviour
     public GameObject deathSplash;
     private Animator _animator;
     private bool _canAttack = true;
+    private EnemySpawner enemySpawner;
+    private AudioSource _audioSource;
+
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         target = GameObject.Find("DrOdd").transform;
         _animator = GetComponentInChildren<Animator>();
+        enemySpawner = GameObject.FindObjectOfType<EnemySpawner>();
+        _audioSource = GetComponent<AudioSource>();
+        StartCoroutine(routine: playRondom());
     }
 
-    
+    IEnumerator playRondom()
+    {
+        while(true)
+        {
+            _audioSource.Play();
+            yield return new WaitForSeconds(UnityEngine.Random.Range(2,10));
+
+        }
+    }
+
     void Update()
     {
 
@@ -35,6 +50,7 @@ public class Enemy : MonoBehaviour
                Mathf.Abs(other.attachedRigidbody.velocity.z) > 5f)
             {
                 Instantiate(deathSplash, transform.position, Quaternion.identity);
+                enemySpawner.currentEnemy -= 1;
                 GameObject.Destroy(gameObject);
             }
         }
