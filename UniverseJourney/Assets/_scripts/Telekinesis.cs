@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class Telekinesis : MonoBehaviour
 {
-    private enum Sounds{
-        +
-    }
-
 
     public float ManuplationDistance = 20f;
     private GameObject _heldObject;
