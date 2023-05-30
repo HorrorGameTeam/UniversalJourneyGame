@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
 [System.Serializable]
 public class Mortality : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Mortality : MonoBehaviour
     public TextMeshProUGUI hp_text;
     public AudioClip deathSound;
     private AudioSource _audioSource;
+
     
         
 
@@ -36,6 +38,8 @@ public class Mortality : MonoBehaviour
         hp = 0;
         _audioSource.clip = deathSound;
         _audioSource.Play();
+
+        
     }
 
     public void takeDamage(int damage)
@@ -59,7 +63,7 @@ public class Mortality : MonoBehaviour
     {
         if(other.CompareTag("Damager"))
         {
-            takeDamage(10);
+            takeDamage(2);
         }
     }
 
@@ -67,6 +71,8 @@ public class Mortality : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
     }
+
+
 }
 
 
