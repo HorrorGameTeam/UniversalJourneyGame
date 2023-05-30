@@ -7,8 +7,6 @@ TagManager:
   - Box
   - Damager
   - Mortal
-  - Troll
-  - WayPoints
   layers:
   - Default
   - TransparentFX
