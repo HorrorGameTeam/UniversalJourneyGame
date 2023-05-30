@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Mortality : MonoBehaviour
@@ -13,10 +14,12 @@ public class Mortality : MonoBehaviour
     public TextMeshProUGUI hp_text;
     public AudioClip deathSound;
     private AudioSource _audioSource;
+    public GameOverMenu GameOverMenu;
     
-        
+    
+    
 
-      public bool Alive()
+    public bool Alive()
     {
         return hp > 0;
     }
@@ -49,7 +52,9 @@ public class Mortality : MonoBehaviour
         {
             if(Alive())
             {
-                Die();
+                SceneManager.LoadScene("GameOver");
+                
+                
             }
         }
         hp_text.text = hp.ToString();

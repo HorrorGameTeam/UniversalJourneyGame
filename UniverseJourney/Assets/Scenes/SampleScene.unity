@@ -4653,6 +4653,7 @@ MonoBehaviour:
   dieOverlay: {fileID: 1692870285}
   hp_text: {fileID: 0}
   deathSound: {fileID: 0}
+  GameOverMenu: {fileID: 0}
 --- !u!136 &995001206
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5017,6 +5018,7 @@ MonoBehaviour:
   dieOverlay: {fileID: 1692870285}
   hp_text: {fileID: 1736910011}
   deathSound: {fileID: 8300000, guid: 3f611bd15c5fa2648a5d0b6c474f3f46, type: 3}
+  GameOverMenu: {fileID: 0}
 --- !u!82 &1049278040
 AudioSource:
   m_ObjectHideFlags: 0

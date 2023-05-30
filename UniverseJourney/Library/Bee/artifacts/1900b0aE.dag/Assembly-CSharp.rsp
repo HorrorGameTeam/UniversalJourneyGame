@@ -354,6 +354,7 @@
 "Assets/_scripts/CameraController.cs"
 "Assets/_scripts/Enemy.cs"
 "Assets/_scripts/EnemySpawner.cs"
+"Assets/_scripts/GameOverMenu.cs"
 "Assets/_scripts/MainMenu.cs"
 "Assets/_scripts/Mortality.cs"
 "Assets/_scripts/PlayerController.cs"
