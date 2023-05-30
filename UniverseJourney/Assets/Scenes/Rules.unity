@@ -501,16 +501,16 @@ MonoBehaviour:
     Press
     the "F" key to release the held object.
 
-    Press the left mouse button to
-    charge objects,
+    Press the left mouse button to charge
+    objects,
 
     Press the left Shift key to sprint and move faster.
 
     allowing
     them to be thrown faster.
 
-    Kill zombies and reach the booth to complete
-    each level.'
+    Kill zombies and reach the booth to complete each
+    level.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9fa417da942473f4b9cdf01c2f5cbbeb, type: 2}
   m_sharedMaterial: {fileID: -3294337725147088917, guid: 9fa417da942473f4b9cdf01c2f5cbbeb, type: 2}
@@ -903,7 +903,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1768679328}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: BackfromRules
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1044153074}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1633530819
