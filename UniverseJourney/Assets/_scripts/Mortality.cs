@@ -64,7 +64,7 @@ public class Mortality : MonoBehaviour
     {
         if(other.CompareTag("Damager"))
         {
-            takeDamage(10);
+            takeDamage(2);
         }
     }
 

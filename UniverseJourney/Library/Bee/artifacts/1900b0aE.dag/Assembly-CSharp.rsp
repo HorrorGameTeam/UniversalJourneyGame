@@ -360,6 +360,7 @@
 "Assets/_scripts/PhoneBooth.cs"
 "Assets/_scripts/PlayerController.cs"
 "Assets/_scripts/Telekinesis.cs"
+"Assets/_scripts/WinMenu.cs"
 -langversion:9.0
 
 /deterministic

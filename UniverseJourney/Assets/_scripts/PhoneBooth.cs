@@ -20,7 +20,7 @@ public class PhoneBooth : MonoBehaviour
     {
         if(enemySpawner != null && enemySpawner.currentEnemy == 0)
         {
-            SceneManager.LoadScene("L2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
     }
