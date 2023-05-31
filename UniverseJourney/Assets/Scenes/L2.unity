@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5444019, g: 0.50700164, b: 0.5242697, a: 1}
+  m_IndirectSpecularColor: {r: 0.5444154, g: 0.50701064, b: 0.5242721, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9607,6 +9607,7 @@ GameObject:
   - component: {fileID: 1287634584}
   - component: {fileID: 1287634586}
   - component: {fileID: 1287634585}
+  - component: {fileID: 1287634587}
   m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9680,6 +9681,26 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!95 &1287634587
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287634583}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ccd5207b2978c0d499bbdaee43905642, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1305099489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10619,7 +10640,7 @@ MonoBehaviour:
   enemy: {fileID: 6568251523928950850, guid: 5e9d0792805c3480c98f274aa423fca8, type: 3}
   zombiesText: {fileID: 170639422}
   currentEnemy: 0
-  numberOfEnemies: 2
+  numberOfEnemies: 15
 --- !u!4 &1522279245
 Transform:
   m_ObjectHideFlags: 0
@@ -14341,6 +14362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2032651170}
+  - component: {fileID: 2032651171}
   m_Layer: 0
   m_Name: PhoneBooth
   m_TagString: Untagged
@@ -14364,6 +14386,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2032651171
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032651169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.45, y: 3, z: 1}
+  m_Center: {x: 0, y: 1.56, z: 0.59}
 --- !u!1001 &2044291189
 PrefabInstance:
   m_ObjectHideFlags: 0
